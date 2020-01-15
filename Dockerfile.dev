@@ -1,0 +1,11 @@
+FROM node:latest
+
+WORKDIR /usr/maze-game-react
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "run", "start"]
